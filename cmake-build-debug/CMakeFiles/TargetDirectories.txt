@@ -1,0 +1,3 @@
+/home/nickobelic1999/CLionProjects/backmeup/cmake-build-debug/CMakeFiles/backmeup.dir
+/home/nickobelic1999/CLionProjects/backmeup/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nickobelic1999/CLionProjects/backmeup/cmake-build-debug/CMakeFiles/rebuild_cache.dir
