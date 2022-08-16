@@ -1,0 +1,11 @@
+/home/nickobelic1999/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/nickobelic1999/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3345.126/bin/ninja/linux/ninja -G Ninja -S /home/nickobelic1999/CLionProjects/backmeup -B /home/nickobelic1999/CLionProjects/backmeup/cmake-build-debug
+-- curlpp version=[0.8.1]
+-- curlpp version num=[000801]
+-- Looking for CURL
+-- Found CURL version: 7.84.0
+-- Using CURL include dir(s): /usr/include
+-- Using CURL lib(s): /usr/lib/libcurl.so
+-- Using the multi-header code from /home/nickobelic1999/CLionProjects/backmeup/external_libs/json/include/
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/nickobelic1999/CLionProjects/backmeup/cmake-build-debug

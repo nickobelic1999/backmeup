@@ -1,24 +1,44 @@
 #include <iostream>
+#include <fstream>
+#include <sstream>
 
 #include "cURLpp.hpp"
 #include "Easy.hpp"
 #include "Options.hpp"
 
+#include "nlohmann/json.hpp"
+#include "nlohmann/json_fwd.hpp"
+
+using json = nlohmann::json;
 
 std::string Auth_Account_Url = "https://api.backblazeb2.com/b2api/v2/b2_authorize_account";
 
-int main()
+int main(int argc, const char* argv[])
 {
-    cURLpp::Easy easyhandle;
+    std::string fileName = "./response.json";
+    std::ofstream outFile(fileName);
+    std::ifstream inFile(fileName);
+
+    std::stringstream jsonString;
+    cURLpp::Easy easyHandle;
+    json data;
+
     std::cout << "Initialized cURLpp" << std::endl;
     cURLpp::initialize();
 
-    easyhandle.setOpt(cURLpp::Options::Url(Auth_Account_Url));
-    easyhandle.setOpt(cURLpp::Options::UserPwd("APPLICATION_KEY_ID:APPLICATION_KEY"));
+    easyHandle.setOpt(cURLpp::Options::Url(Auth_Account_Url));
+    easyHandle.setOpt(cURLpp::Options::UserPwd("d3d4ac0eb209:004147fd7ce03cb42ace6b9a87747d0f7780b632f7"));
 
-    easyhandle.perform();
+    easyHandle.setOpt(cURLpp::Options::WriteStream(&jsonString));
 
-    std::cout << std::endl;
+    jsonString << easyHandle.perform();
+    outFile << jsonString.rdbuf();
+    outFile.flush();
+    outFile.close();
+
+    data = json::parse(inFile);
+
+
 
     std::cout << "Terminated cURLpp" << std::endl;
     cURLpp::terminate();
