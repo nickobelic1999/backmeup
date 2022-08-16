@@ -1,0 +1,9 @@
+[submodule "external_libs/curlpp"]
+	path = external_libs/curlpp
+	url = https://github.com/jpbarrette/curlpp.git
+[submodule "external_libs/json"]
+	path = external_libs/json
+	url = https://github.com/nlohmann/json.git
+[submodule "external_libs/pugixml"]
+	path = external_libs/pugixml
+	url = https://github.com/zeux/pugixml.git
