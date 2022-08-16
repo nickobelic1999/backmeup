@@ -27,7 +27,7 @@ int main(int argc, const char* argv[])
     cURLpp::initialize();
 
     easyHandle.setOpt(cURLpp::Options::Url(Auth_Account_Url));
-    easyHandle.setOpt(cURLpp::Options::UserPwd("d3d4ac0eb209:004147fd7ce03cb42ace6b9a87747d0f7780b632f7"));
+    easyHandle.setOpt(cURLpp::Options::UserPwd("APPLICATION_KEY_ID:APPLICATION_KEY"));
 
     easyHandle.setOpt(cURLpp::Options::WriteStream(&jsonString));
 
